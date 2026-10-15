@@ -1,4 +1,7 @@
 package co.edu.ucompensar.veterinaria.repository;
 
-public interface CitaRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CitaRepository extends JpaRepository<cita> {
+
 }
