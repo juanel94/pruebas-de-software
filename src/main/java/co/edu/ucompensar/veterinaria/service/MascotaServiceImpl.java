@@ -3,6 +3,7 @@ package co.edu.ucompensar.veterinaria.service;
 import co.edu.ucompensar.veterinaria.modelo.Mascota;
 import co.edu.ucompensar.veterinaria.repository.MascotaRepository;
 import org.springframework.stereotype.Service;
+import co.edu.ucompensar.veterinaria.exception.ValidacionException;
 
 import java.util.List;
 
