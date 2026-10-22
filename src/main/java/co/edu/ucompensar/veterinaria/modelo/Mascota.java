@@ -1,9 +1,10 @@
 package co.edu.ucompensar.veterinaria.modelo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.RecursiveTask;
 
 @Entity
 public class Mascota {
@@ -18,12 +19,14 @@ public class Mascota {
     private String Especie;
     private String NombrePropietario;
     private String TelefonoPropietario;
+    @OneToMany
+    private List<Cita> citas;
 
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(long zid) {
         this.id = id;
     }
 
@@ -57,5 +60,13 @@ public class Mascota {
 
     public void setTelefonoPropietario(String telefonoPropietario) {
         TelefonoPropietario = telefonoPropietario;
+    }
+
+    public void setCitas(List<Cita> citas) {
+        this.citas = citas;
+    }
+
+    public List<Cita> getCitas() {
+        return citas;
     }
 }
